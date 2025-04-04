@@ -9,8 +9,7 @@ export interface PredictionResult {
   period: string;
 }
 
-
-export interface Stock_List{
-    symbol: string;
-    name: string;
+export interface StockList {
+  symbol: string;
+  name: string;
 }
