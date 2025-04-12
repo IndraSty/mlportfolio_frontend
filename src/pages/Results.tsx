@@ -13,9 +13,10 @@ export function Results() {
   ];
 
   const modelComparison = [
-    { name: 'LSTM', accuracy: 87, rmse: 0.92 },
-    { name: 'Ensemble', accuracy: 85, rmse: 0.95 },
-    { name: 'Transformer', accuracy: 89, rmse: 0.88 },
+    { name: 'LSTM', accuracy: 62, rmse: 8.95 },
+    { name: 'XGBoost', accuracy: 60, rmse: 9.12 },
+    { name: 'Random Forest', accuracy: 60, rmse: 9.05 },
+    { name: 'LightGBM', accuracy: 59, rmse: 9.27 },
   ];
 
   return (
@@ -34,7 +35,7 @@ export function Results() {
               <Target className="w-8 h-8 text-blue-400 mr-3" />
               <h3 className="text-lg font-semibold text-white">Prediction Accuracy</h3>
             </div>
-            <p className="text-4xl font-bold text-blue-400">87%</p>
+            <p className="text-4xl font-bold text-blue-400">60%</p>
             <p className="text-gray-400 mt-2">Directional Accuracy</p>
           </div>
 
@@ -43,7 +44,7 @@ export function Results() {
               <AlertTriangle className="w-8 h-8 text-blue-400 mr-3" />
               <h3 className="text-lg font-semibold text-white">RMSE Score</h3>
             </div>
-            <p className="text-4xl font-bold text-blue-400">0.92</p>
+            <p className="text-4xl font-bold text-blue-400">9.12</p>
             <p className="text-gray-400 mt-2">Normalized</p>
           </div>
 
@@ -52,7 +53,7 @@ export function Results() {
               <TrendingUp className="w-8 h-8 text-blue-400 mr-3" />
               <h3 className="text-lg font-semibold text-white">F1 Score</h3>
             </div>
-            <p className="text-4xl font-bold text-blue-400">0.78</p>
+            <p className="text-4xl font-bold text-blue-400">0.60</p>
             <p className="text-gray-400 mt-2">Balance Score</p>
           </div>
 
@@ -61,7 +62,7 @@ export function Results() {
               <BarChart className="w-8 h-8 text-blue-400 mr-3" />
               <h3 className="text-lg font-semibold text-white">MAE</h3>
             </div>
-            <p className="text-4xl font-bold text-blue-400">1.8%</p>
+            <p className="text-4xl font-bold text-blue-400">4.25%</p>
             <p className="text-gray-400 mt-2">Price Error</p>
           </div>
         </div>

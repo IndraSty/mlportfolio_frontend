@@ -1,3 +1,9 @@
+
+export type PredictionRequest = {
+  stock: string;
+  model: string;
+  period: string;
+}
 export interface PredictionResult {
   stock: string;
   current_price: number;

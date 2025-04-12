@@ -1,10 +1,7 @@
 import {
   LineChart,
   TrendingUp,
-  Brain,
   Database,
-  GitBranch,
-  Share2,
 } from "lucide-react";
 
 export function Home() {
@@ -46,39 +43,21 @@ export function Home() {
             {[
               {
                 icon: <LineChart className="w-12 h-12 text-blue-400" />,
-                title: "Real-time Analysis",
+                title: "Market Prediction",
                 description:
-                  "Process and analyze market data in real-time for immediate insights",
-              },
-              {
-                icon: <Brain className="w-12 h-12 text-blue-400" />,
-                title: "AI-Powered Predictions",
-                description:
-                  "Advanced machine learning algorithms for accurate market predictions",
-              },
-              {
-                icon: <Database className="w-12 h-12 text-blue-400" />,
-                title: "Historical Data",
-                description:
-                  "Comprehensive historical data analysis for pattern recognition",
+                  "AI-powered stock price forecasting using historical data",
               },
               {
                 icon: <TrendingUp className="w-12 h-12 text-blue-400" />,
-                title: "Trend Detection",
+                title: "Trend Analysis",
                 description:
-                  "Automatic identification of market trends and patterns",
+                  "Identify key market trends and momentum indicators",
               },
               {
-                icon: <Share2 className="w-12 h-12 text-blue-400" />,
-                title: "Custom Alerts",
+                icon: <Database className="w-12 h-12 text-blue-400" />,
+                title: "Historical Patterns",
                 description:
-                  "Personalized notifications for market movements and opportunities",
-              },
-              {
-                icon: <GitBranch className="w-12 h-12 text-blue-400" />,
-                title: "Portfolio Integration",
-                description:
-                  "Seamless integration with existing trading platforms",
+                  "Analyze past performance to inform future decisions",
               },
             ].map((feature, index) => (
               <div

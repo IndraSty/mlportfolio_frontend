@@ -1,41 +1,49 @@
-import { Brain, LineChart, Network } from "lucide-react";
+import { Brain, Layers, Trees, Sigma, Zap } from "lucide-react";
 
 export function Models() {
   const models = [
     {
       icon: <Brain className="w-12 h-12 text-blue-400" />,
       name: "LSTM Networks",
-      description:
-        "Long Short-Term Memory networks excel at analyzing time series data and capturing long-term patterns in stock prices.",
+      description: "Recurrent neural network designed for time-series data, using memory cells to capture long-term dependencies in stock price movements.",
       features: [
         "Sequential data processing",
-        "Long-term dependency learning",
-        "Robust pattern recognition",
-        "Real-time prediction capability",
+        "Memory cell architecture",
+        "Handles market volatility",
+        "Multi-step forecasting capability",
       ],
     },
     {
-      icon: <Network className="w-12 h-12 text-blue-400" />,
-      name: "Ensemble Methods",
-      description:
-        "Combining multiple models like Random Forest and Gradient Boosting to improve prediction accuracy.",
+      icon: <Layers className="w-12 h-12 text-green-400" />,
+      name: "XGBoost",
+      description: "Optimized gradient-boosting algorithm that combines weak learners into a strong model, ideal for tabular financial data.",
       features: [
-        "Multiple model integration",
-        "Reduced overfitting",
-        "Higher prediction stability",
-        "Automated feature selection",
+        "Regularized gradient boosting",
+        "Parallel tree construction",
+        "Automatic feature selection",
+        "Handles missing values",
       ],
     },
     {
-      icon: <LineChart className="w-12 h-12 text-blue-400" />,
-      name: "Transformer Models",
-      description:
-        "Using Transformer architecture to capture complex relationships in market data and enhance prediction capabilities.",
+      icon: <Trees className="w-12 h-12 text-amber-400" />,
+      name: "Random Forest",
+      description: "Ensemble of decision trees that improves prediction stability through majority voting, reducing overfitting.",
       features: [
-        "Attention mechanism",
-        "Parallel processing",
-        "Multi-factor analysis",
-        "Scalable architecture",
+        "Bagging technique",
+        "Multiple decision trees",
+        "Feature importance ranking",
+        "Robust to outliers",
+      ],
+    },
+    {
+      icon: <Zap className="w-12 h-12 text-purple-400" />,
+      name: "LightGBM",
+      description: "High-performance gradient boosting framework with leaf-wise growth, optimized for speed and large datasets.",
+      features: [
+        "Faster training speed",
+        "Lower memory usage",
+        "GPU acceleration support",
+        "Excellent for high-frequency data",
       ],
     },
   ];
@@ -84,19 +92,19 @@ export function Models() {
           </h2>
           <div className="grid md:grid-cols-4 gap-4">
             <div className="bg-gray-700 p-4 rounded-lg text-center">
-              <p className="text-3xl font-bold text-blue-400 mb-2">87%</p>
+              <p className="text-3xl font-bold text-blue-400 mb-2">60%</p>
               <p className="text-gray-300">Prediction Accuracy</p>
             </div>
             <div className="bg-gray-700 p-4 rounded-lg text-center">
-              <p className="text-3xl font-bold text-blue-400 mb-2">0.92</p>
+              <p className="text-3xl font-bold text-blue-400 mb-2">9.12</p>
               <p className="text-gray-300">RMSE Score</p>
             </div>
             <div className="bg-gray-700 p-4 rounded-lg text-center">
-              <p className="text-3xl font-bold text-blue-400 mb-2">0.78</p>
+              <p className="text-3xl font-bold text-blue-400 mb-2">0.60</p>
               <p className="text-gray-300">F1 Score</p>
             </div>
             <div className="bg-gray-700 p-4 rounded-lg text-center">
-              <p className="text-3xl font-bold text-blue-400 mb-2">1.8%</p>
+              <p className="text-3xl font-bold text-blue-400 mb-2">4.25%</p>
               <p className="text-gray-300">MAE</p>
             </div>
           </div>
