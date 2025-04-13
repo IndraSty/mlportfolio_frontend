@@ -19,7 +19,7 @@ const Footer = () => {
           </div>
 
           {/* Second column */}
-          <div className="text-center sm:text-left lg:text-center">
+          <div className="text-left lg:text-center">
             <h2 className="text-xl font-bold mb-4">Links</h2>
             <ul className="space-y-2">
               <li>
@@ -46,13 +46,13 @@ const Footer = () => {
           </div>
 
           {/* Third column */}
-          <div className="text-center sm:text-right">
+          <div className="text-left sm:text-right">
             <h2 className="text-xl font-bold mb-4">Contact</h2>
             <ul className="space-y-2">
               <li>
                 <a
                   href="mailto:indrastyawan0925@gmail.com"
-                  className="text-gray-300 hover:text-white transition-colors flex items-center justify-center sm:justify-end gap-2"
+                  className="text-gray-300 hover:text-white transition-colors flex items-center md:justify-center justify-start gap-2"
                 >
                   <Mail size={16} />
                   <span>indrastyawan0925@gmail.com</span>
@@ -61,7 +61,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="https://www.linkedin.com/in/indrastyawan25/" 
-                  className="text-gray-300 hover:text-white transition-colors flex items-center justify-center sm:justify-end gap-2"
+                  className="text-gray-300 hover:text-white transition-colors flex items-center md:justify-center justify-start gap-2"
                 >
                   <Linkedin size={16} />
                   <span>LinkedIn</span>
@@ -70,7 +70,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#" 
-                  className="text-gray-300 hover:text-white transition-colors flex items-center justify-center sm:justify-end gap-2"
+                  className="text-gray-300 hover:text-white transition-colors flex items-center md:justify-center justify-start gap-2"
                 >
                   <Twitter size={16} />
                   <span>Twitter</span>
@@ -79,7 +79,7 @@ const Footer = () => {
               <li>
                 <a 
                   href="#" 
-                  className="text-gray-300 hover:text-white transition-colors flex items-center justify-center sm:justify-end gap-2"
+                  className="text-gray-300 hover:text-white transition-colors flex items-center md:justify-center justify-start gap-2"
                 >
                   <Github size={16} />
                   <span>GitHub Repo</span>
