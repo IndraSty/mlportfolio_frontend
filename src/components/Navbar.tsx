@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
-import { LineChart } from "lucide-react";
+import { LineChart, Menu, X } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -13,6 +14,10 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   return (
     <nav
@@ -30,6 +35,8 @@ export function Navbar() {
               MLPortfolio
             </span>
           </Link>
+
+          {/* Desktop menu */}
           <div className="hidden md:flex items-center space-x-8">
             <Link
               to="/about"
@@ -56,7 +63,60 @@ export function Navbar() {
               Demo
             </Link>
           </div>
+
+          {/* Mobile menu button */}
+          <div className="md:hidden">
+            <button
+              onClick={toggleMenu}
+              className="text-gray-300 hover:text-white focus:outline-none"
+              aria-label="Toggle menu"
+            >
+              {isMenuOpen ? (
+                <X className="w-6 h-6" />
+              ) : (
+                <Menu className="w-6 h-6" />
+              )}
+            </button>
+          </div>
         </div>
+
+        {/* Mobile menu */}
+        {isMenuOpen && (
+          <div className="md:hidden">
+            <div
+              className={`px-2 pt-2 pb-4 space-y-3 bg-gray-900/95 shadow-lg rounded-b-lg`}
+            >
+              <Link
+                to="/about"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                About
+              </Link>
+              <Link
+                to="/models"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Models
+              </Link>
+              <Link
+                to="/results"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Results
+              </Link>
+              <Link
+                to="/demo"
+                className="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800/50 rounded-md transition-colors"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Demo
+              </Link>
+            </div>
+          </div>
+        )}
       </div>
     </nav>
   );
