@@ -138,7 +138,7 @@ export function Demo() {
                   
                   <div className="mt-3">
                     <p className="text-sm text-gray-300 text-center">
-                      Server backend saat ini sedang tidak aktif. Silakan coba lagi nanti atau hubungi tim support.
+                      Server backend saat ini sedang tidak aktif. Silakan coba lagi nanti.
                     </p>
                   </div>
 
